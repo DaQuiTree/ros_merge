@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>乐兰网_文章自助</title>
+    <link rel="icon" href="https://tb.lelanlan.com/static/img/lanLogo.png">
+    <meta charset="utf-8">
+    <meta name="Description" content="乐兰网_文章自助,文件素材自助下载服务">
+    <meta name="keywords" content="乐兰网_文章自助">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="referrer" content="no-referrer">
+    <link rel="stylesheet" href="VTK_files/layui.css">
+    <link rel="stylesheet" href="VTK_files/global.css">
+    <link rel="stylesheet" href="VTK_files/btnCss.json">
+    <script src="VTK_files/hm.asc"></script><script src="VTK_files/jquery.js"></script>
+    <script src="VTK_files/layui.js"></script>
+    <script src="VTK_files/Feng.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?31cc9baa0178e2444ed4276039695007";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <style>
+        .img-box{
+            padding-bottom:7%;
+        }
+        .img-box img {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            margin: 0;
+        }
+    </style>
+<link id="layuicss-layer" rel="stylesheet" href="VTK_files/layer.css" media="all"></head>
+<body>
+
+<div class="layui-main" id="openforArticle" style="margin-top: 40px"><article class="baidu_pl"> 
+ <div id="article_content" class="article_content clearfix"> 
+  <link rel="stylesheet" href="VTK_files/ck_htmledit_views-b5506197d8.css"> 
+  <div id="content_views" class="htmledit_views"> 
+   <p>下面是漫长的踩坑的过程。</p> 
+   <p>首先按照我编译opencv 的思路去做了！发现找不到vtk&nbsp; arm的编译器，后来就用网上编译opencv的思路编译vtk ;</p> 
+   <p>报错1：</p> 
+   <p>FindVTKComplier.cmake</p> 
+   <p>错误原因是找不到这个文件，看一下findpackage的用法：<a href="https://blog.csdn.net/bytxl/article/details/50637277">https://blog.csdn.net/bytxl/article/details/50637277</a></p> 
+   <p>在电脑上找不到这个文件，采用locate + 文件名 找不到 呵呵！是不是8.2.0不支持交叉编译！！</p> 
+   <hr> 
+   <p>看到一篇文章：<a href="http://vtk.1045678.n5.nabble.com/Building-VTK-on-a-BlueGene-P-td5723290.html">http://vtk.1045678.n5.nabble.com/Building-VTK-on-a-BlueGene-P-td5723290.html</a></p> 
+   <p>您缺少的要点是，对于像VTK这样的复杂项目，其中的构建过程本身会创建并运行可生成代码并进行系统自检的编译时可执行文件，因此您需要进行
+两次编译。 第一个编译在主机系统上运行，并生成在主机系统上运行的可执行文件。 
+第二个编译在主机上运行（使用在第一遍中生成的编译时可执行文件），但是生成在目标系统上运行的可执行文件。</p> 
+   <p>现在首先在ubuntu下编译一边vtk 再重新arm编译一遍还是没有找到FindVTKComplier 文件，我醉了。。。继续尝试，重新编译啦！</p> 
+   <hr> 
+   <p>继续啦！在上面的操作上继续一步：</p> 
+   <p>在 cmake&nbsp; MAKE_FIND_ROOY_PATH&nbsp; 改成在自己电脑编译的vtk路径 终于不是上面的错误了！</p> 
+   <p>继续报错：</p> 
+   <p>TRY_RUN() invoked in cross-compiling mode,please set the following cache.........ls</p> 
+   <p>balabala..........</p> 
+   <p>看了一个连接：交叉编译MySQL的【CAPI（libmysalclient）】....</p> 
+   <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;:<a href="https://blog.csdn.net/lc315yuhuofei/article/details/103711181">https://blog.csdn.net/lc315yuhuofei/article/details/103711181</a></p> 
+   <p>采用了二次make..{就是再次config}。。</p> 
+   <p>完事继续报错，，，，，</p> 
+   <p><img alt="" class="has" src="VTK_files/20200106194918421.png" width="871" height="249"></p> 
+   <p>要忙其他的事情了。。。。先放着。&nbsp;</p> 
+   <p>&nbsp;</p> 
+   <hr> 
+   <p>针对下面所有的报错，解决措施只有一个：将路径统统换&nbsp; &nbsp;/home/xing/pcl-arm/vtk-arm/VTK-8.2.0/build-pc</p> 
+   <p><img alt="" class="has" src="VTK_files/2020010710595340.png" width="983" height="289"></p> 
+   <p><img alt="" class="has" src="VTK_files/2020010711001120.png" width="900" height="258"></p> 
+   <p>不知道成功与否，反正cmake 先通过了。。。。。&nbsp;</p> 
+   <p>这个原因是因为：</p> 
+   <p><a href="https://blog.csdn.net/huofire001/article/details/101711016">&nbsp;
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
+https://blog.csdn.net/huofire001/article/details/101711016</a></p> 
+   <p>后续多看看那个交叉编译mysql的文章！</p> 
+   <p>后续又看到一篇文章：</p> 
+   <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a href="https://blog.csdn.net/fhyocean/article/details/74960005">https://blog.csdn.net/fhyocean/article/details/74960005</a></p> 
+   <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a href="https://www.cnblogs.com/Charles-Zhang-Blog/p/3529980.html">https://www.cnblogs.com/Charles-Zhang-Blog/p/3529980.html</a></p> 
+   <p>这个让我意识到，缺失的opengl 等等这些包是不是统统需要交叉编译呢？交叉编译完之后将文件路径添加到相应的位置。</p> 
+   <p>由于对cmake 的使用不是特别懂，目前继续弄着吧！</p> 
+   <p>在电脑的编译器的位置处一一添加库的路径具体到.so文件，效果如下！（/usr/lib/x86_64-linux-gnu）</p> 
+   <p><img alt="" class="has" src="VTK_files/2020011113433169.png" width="1057" height="415"></p> 
+  </div> 
+ </div> 
+</article><h4 style="margin: 30px auto">--END--</h4></div>
+<script>
+    //注意：导航 依赖 element 模块，否则无法进行功能性操作
+    var downUrlReg = /(https:\/\/blog.csdn.net\/\w+\/\w+\/\w+)/;
+    var downUrlRegLoad=/(https:\/\/download.csdn.net\/\w+\/\w+\/\w+)/;
+    var downUrlRegLoad2=/(https:\/\/download.csdn.net\/index.php\/mobile\/source\/download\/\w+)/;
+    layui.use(['element', 'form'], function () {
+        var element = layui.element;
+        var form = layui.form;
+        var code = getParam("code");
+        $("#code").val(code);
+        // if (code != null && typeof code != 'undefined' && code.length > 0) {
+        //     $('#buy').hide();
+        // }
+
+        /**
+         * 获取指定的URL参数值
+         */
+        function getParam(paramName) {
+            paramValue = "", isFound = !1;
+            if (this.location.search.indexOf("?") == 0 && this.location.search.indexOf("=") > 1) {
+                arrSource = unescape(this.location.search).substring(1, this.location.search.length).split("&"), i = 0;
+                while (i < arrSource.length && !isFound) arrSource[i].indexOf("=") > 0 && arrSource[i].split("=")[0].toLowerCase() == paramName.toLowerCase() && (paramValue = arrSource[i].split("=")[1], isFound = !0), i++
+            }
+            return paramValue == "" && (paramValue = null), paramValue
+        }
+    });
+
+    function downArticle() {
+        $("#file").attr("href", "")
+        $("#file").attr("download", "")
+        var code = $("#code").val();
+        var downUrl = $("#downUrl").val();
+        if ((downUrlRegLoad.test(downUrl) || downUrlRegLoad2.test(downUrl))) {
+            var operation = function () {
+                var index = layer.load(2, {
+                    shade: [0.5, "#e4e2e6"]
+                });
+                $.ajax({
+                    url: "/api/webDown",
+                    data: {"code": code, "downUrl": downUrl, "email": email,"source":"2"},
+                    success: function (response) {
+                        layer.close(index);
+                        if (response.status == 1) {
+                            layer.msg("下载成功！" + response.msg);
+                            var path = response.result;
+                            $("#file").attr("href", path)
+                            $("#file").attr("download", path.substr(path.lastIndexOf("/") + 1))
+                            document.getElementById("file").click();
+                        } else {
+                            layer.msg(response.msg);
+                        }
+                    }
+                });
+            }
+            Feng.confirm("确认下载地址无误吗？该激活码只能使用一次！", operation);
+        }
+        else if (downUrlReg.test(downUrl)) {
+            var email = $("#email").val();
+            var operation = function () {
+                $.ajax({
+                    url: "/api/getVipArticleFile",
+                    data: {"code": code, "downUrl": downUrl, "email": email},
+                    beforeSend:function(){
+                        $("#loading").html("<img src='/static/img/loading.gif' />"); //在请求后台数据之前显示loading图标
+                    },
+                    success: function (response) {
+                        if (response.status == 1) {
+                            if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
+                                document.getElementById("openforArticle").innerHTML = response.result;
+                            }else{
+                                // var ow = window.open();
+                                // ow.document.write(response.result);
+                                // ow.document.clear();
+                                document.getElementById("openforArticle").innerHTML = response.result;
+                                //获得openforArticle
+                                var openforArticle = document.getElementById("openforArticle");
+                                //创建end节点
+                                var h4 = document.createElement("h4");
+                                //给h4设置属性
+                                h4.setAttribute("style", "margin: 30px auto");
+                                h4.innerText = '--END--';
+                                //添加子节点h4
+                                openforArticle.appendChild(h4);
+                            }
+                        } else {
+                            layer.msg(response.msg);
+                        }
+                    },
+                    complete: function () {
+                        $('#loading').remove();
+                    }
+                });
+            }
+            Feng.confirm("确认文章链接无误吗？该激活码只能使用一次！", operation);
+        }else {
+            layer.msg("请输入正确下载地址格式！https://blog.csdn.net/xx/xx");
+            return;
+        }
+    }
+</script>
+<script type="text/javascript">(function (w) {w.frontjsConfig = {token: "2fe8b339aa2f56f77f55a38c5c6c9764", behaviour: 15, optimisedForSPA: true, useHistory: true, trustVendor: true};w.frontjsTmpData = {r:[],e:[],l:[]};w.frontjsTmpCollector = function (ev) {(ev.message ? window.frontjsTmpData.e : window.frontjsTmpData.r).push([new Date().getTime(), ev])};w.FrontJS = {addEventListener: function (t, f) {w.frontjsTmpData.l.push([t, f]);return f;},removeEventListener: function (t, f) {for (var i = 0; i < w.frontjsTmpData.l.length; i++) {t === w.frontjsTmpData.l[i][0] && f === w.frontjsTmpData.l[i][1] && w.frontjsTmpData.l.splice(i, 1);}return f;}};w.document.addEventListener("error", w.frontjsTmpCollector, true);w.addEventListener("error", w.frontjsTmpCollector, true);w.addEventListener("load", function () {var n = w.document.createElement("script");n.src = "https://static.frontjs.com/dist/current/tracker.min.js"; w.document.body.appendChild(n);}, true);})(window);</script>
+
+<script src="VTK_files/tracker.js"></script><div class="layui-layer-move"></div></body></html>
