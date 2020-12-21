@@ -1,17 +1,19 @@
 #!/bin/bash
 
-Tar_path=/home/daquitree/Downloads/ecl_lite-0.61.6/
+Target=kobuki_core 						# should check
+Pkg_version="0.7.10"     					# should check
+Pkg_type=tar.gz							# should check
+Path=/home/daquitree/Downloads					# should check
+Tarball_path=$Path/${Target}-${Pkg_version}.${Pkg_type}		# should check
+Dir_path=$Path/${Target}-${Pkg_version}
 
-set $(ls -l $Tar_path | grep "^d" | awk '{print $9}' |grep -wv "ecl_lite")
+Archive_path="https://github.com/yujinrobot/kobuki_core/archive" 	# should check
 
-Module_path="ecl_lite"
-Hash_name="ecl_lite.hash"
-Pkg_version="0.61.6"
-Archive_path="https://github.com/stonier/ecl_lite/archive"
+set $(ls -l $Dir_path | grep "^d" | awk '{print $9}')
 
 echoGConfigIn()
 {
-echo source \"package/rockchip/ros/$Module_path/$1/Config.in\" >> Config.in
+echo source \"package/rockchip/ros/$Target/$1/Config.in\" >> Config.in #should check
 }
 
 touchConfigIn()
@@ -28,7 +30,10 @@ config BR2_PACKAGE_$upper
 
 copyRenameHash()
 {
-cp $Module_path/$Hash_name $1/$1.hash
+cat >$1/$1.hash <<!FUNKY!	
+md5 $(md5sum $Tarball_path | cut -d " " -f 1) ${Pkg_version}.tar.gz
+!FUNKY!
+
 }
 
 editMK()
@@ -43,13 +48,36 @@ ${upper}_SOURCE = \$(${upper}_VERSION).tar.gz
 ${upper}_SITE = $Archive_path
 ${upper}_SUBDIR = $1
 
-#${upper}_DEPENDENCIES = bash findutils
+#${upper}_DEPENDENCIES = 
 
 \$(eval \$(catkin-package))
 
 !FUNKY!
 }
 
+
+touchGlobalFiles()
+{
+#touch global .mk
+echo "include \$(sort \$(wildcard package/rockchip/ros/$Target/*/*.mk))" > $Target.mk
+
+#touch global Config.in
+typeset -u upper
+upper="$Target"
+cat >Config.in <<!FUNKY!	
+config BR2_PACKAGE_${upper}_SET
+    bool "$Target"
+    depends on BR2_PACKAGE_HOST_CATKIN
+    help
+      "$Target DaQui Marked" 
+
+if BR2_PACKAGE_${upper}_SET
+!FUNKY!
+}
+
+
+#main
+touchGlobalFiles
 while [ "$1" != "" ]; do
 	mkdir $1
 	echoGConfigIn $1
@@ -59,6 +87,8 @@ while [ "$1" != "" ]; do
 	#rm -rf $1
 	shift
 done
+
+echo endif >> Config.in #finish Config.in
 
 exit 0
 
