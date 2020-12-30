@@ -1,0 +1,4 @@
+config BR2_PACKAGE_YOCS_KEYOP
+    bool "yocs_keyop"
+    help
+      "yocs_keyop" 

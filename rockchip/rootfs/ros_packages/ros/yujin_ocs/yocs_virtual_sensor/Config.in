@@ -1,0 +1,4 @@
+config BR2_PACKAGE_YOCS_VIRTUAL_SENSOR
+    bool "yocs_virtual_sensor"
+    help
+      "yocs_virtual_sensor" 

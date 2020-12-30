@@ -1,0 +1,8 @@
+config BR2_PACKAGE_BAIDU_SPEECH
+    bool "baidu_speech"
+    select BR2_PACKAGE_MESSAGE_GENERATION
+    select BR2_PACKAGE_STD_MSGS
+    select BR2_PACKAGE_ROSPY
+    help
+      "baidu_speech" 
+

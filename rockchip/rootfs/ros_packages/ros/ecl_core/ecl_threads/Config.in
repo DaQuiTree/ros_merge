@@ -1,0 +1,4 @@
+config BR2_PACKAGE_ECL_THREADS
+    bool "ecl_threads"
+    help
+      "ecl_threads" 

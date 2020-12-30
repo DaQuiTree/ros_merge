@@ -1,0 +1,8 @@
+menuconfig BR2_PACKAGE_DIAGNOSTICS_SET
+	bool "diagnostics"
+	depends on BR2_PACKAGE_HOST_CATKIN
+
+if BR2_PACKAGE_DIAGNOSTICS_SET
+source "package/rockchip/ros/diagnostics/diagnostic_updater/Config.in"
+source "package/rockchip/ros/diagnostics/diagnostic_aggregator/Config.in"
+endif

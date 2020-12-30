@@ -1,0 +1,4 @@
+config BR2_PACKAGE_ECL_TIME_LITE
+    bool "ecl_time_lite"
+    help
+      "ecl_time_lite" 

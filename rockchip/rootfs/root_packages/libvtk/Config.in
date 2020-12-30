@@ -1,0 +1,6 @@
+config BR2_PACKAGE_LIBVTK
+	bool "libvtk"
+	help
+	  The Visualization Toolkit
+	  daqui modified
+

@@ -1,0 +1,13 @@
+config BR2_PACKAGE_KOBUKI_KEYOP
+    bool "kobuki_keyop"
+    select BR2_PACKAGE_STD_MSGS
+    select BR2_PACKAGE_STD_SRVS
+    select BR2_PACKAGE_ROSCPP
+    select BR2_PACKAGE_GEOMETRY_MSGS
+    select BR2_PACKAGE_ECL_EXCEPTIONS
+    select BR2_PACKAGE_ECL_THREADS
+    select BR2_PACKAGE_ECL_TIME
+    select BR2_PACKAGE_KOBUKI_MSGS
+    help
+      "kobuki_keyop" 
+

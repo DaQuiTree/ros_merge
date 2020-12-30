@@ -1,0 +1,4 @@
+config BR2_PACKAGE_YOCS_AR_PAIR_TRACKING
+    bool "yocs_ar_pair_tracking"
+    help
+      "yocs_ar_pair_tracking" 

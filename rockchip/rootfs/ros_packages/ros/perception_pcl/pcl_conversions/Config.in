@@ -1,0 +1,4 @@
+config BR2_PACKAGE_PCL_CONVERSIONS_BUILD
+    bool "pcl_conversions"
+    help
+      "pcl_conversions" 

@@ -1,0 +1,9 @@
+config BR2_PACKAGE_ROBOT_MACHINE
+    bool "robot_machine"
+    select BR2_PACKAGE_ROSCPP
+    select BR2_PACKAGE_ROSPY
+    select BR2_PACKAGE_STD_MSGS
+    select BR2_PACKAGE_ROBOT_MSGS
+    help
+      "robot_machine" 
+

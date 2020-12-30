@@ -1,0 +1,9 @@
+menuconfig BR2_PACKAGE_PERCEPTION_PCL_SET
+	bool "perception_pcl"
+	depends on BR2_PACKAGE_HOST_CATKIN
+
+if BR2_PACKAGE_PERCEPTION_PCL_SET
+source "package/rockchip/ros/perception_pcl/pcl_msgs/Config.in"
+source "package/rockchip/ros/perception_pcl/pcl_ros/Config.in"
+source "package/rockchip/ros/perception_pcl/pcl_conversions/Config.in"
+endif

@@ -1,0 +1,4 @@
+config BR2_PACKAGE_ECL_SIGSLOTS_LITE
+    bool "ecl_sigslots_lite"
+    help
+      "ecl_sigslots_lite" 

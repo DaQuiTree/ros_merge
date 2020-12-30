@@ -1,0 +1,4 @@
+config BR2_PACKAGE_ECL_FILESYSTEM
+    bool "ecl_filesystem"
+    help
+      "ecl_filesystem" 

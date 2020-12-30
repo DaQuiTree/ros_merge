@@ -1,0 +1,4 @@
+config BR2_PACKAGE_YOCS_CMD_VEL_MUX
+    bool "yocs_cmd_vel_mux"
+    help
+      "yocs_cmd_vel_mux" 

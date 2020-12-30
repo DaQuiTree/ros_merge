@@ -1,0 +1,4 @@
+config BR2_PACKAGE_ECL_GEOMETRY
+    bool "ecl_geometry"
+    help
+      "ecl_geometry" 

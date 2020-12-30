@@ -1,0 +1,4 @@
+config BR2_PACKAGE_ECL_CONVERTERS
+    bool "ecl_converters"
+    help
+      "ecl_converters" 

@@ -1,0 +1,12 @@
+config BR2_PACKAGE_TOPBAND_APP
+    bool "topband_app"
+    select BR2_PACKAGE_ROSCPP
+    select BR2_PACKAGE_SENSOR_MSGS
+    select BR2_PACKAGE_STD_MSGS
+    select BR2_PACKAGE_ANGLES
+    select BR2_PACKAGE_GEOMETRY_MSGS
+    select BR2_PACKAGE_MESSAGE_GENERATION
+    select BR2_PACKAGE_MESSAGE_RUNTIME
+    help
+      "topband_app" 
+

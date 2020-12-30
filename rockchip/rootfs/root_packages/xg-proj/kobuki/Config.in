@@ -1,0 +1,15 @@
+config BR2_PACKAGE_KOBUKI
+  bool "kobuki"
+  depends on BR2_PACKAGE_HOST_CATKIN
+  help
+    "xiao gou kobuki"
+
+if BR2_PACKAGE_KOBUKI
+source "package/xg-proj/kobuki/kobuki_msgs/Config.in"
+source "package/xg-proj/kobuki/kobuki_keyop/Config.in"
+source "package/xg-proj/kobuki/kobuki_driver/Config.in"
+source "package/xg-proj/kobuki/kobuki_ftdi/Config.in"
+source "package/xg-proj/kobuki/kobuki_safety_controller/Config.in"
+source "package/xg-proj/kobuki/kobuki_node/Config.in"
+source "package/xg-proj/kobuki/robot_srv/Config.in"
+endif

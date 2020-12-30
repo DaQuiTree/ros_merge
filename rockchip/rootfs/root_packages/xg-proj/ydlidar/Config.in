@@ -1,0 +1,8 @@
+config BR2_PACKAGE_YDLIDAR
+    bool "ydlidar"
+    select BR2_PACKAGE_ROSCONSOLE
+    select BR2_PACKAGE_ROSCPP
+    select BR2_PACKAGE_SENSOR_MSGS
+    help
+      "ydlidar" 
+

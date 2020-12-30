@@ -1,0 +1,4 @@
+config BR2_PACKAGE_YUJIN_OCS_BUILD
+    bool "yujin_ocs"
+    help
+      "yujin_ocs" 

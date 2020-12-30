@@ -1,0 +1,8 @@
+config BR2_PACKAGE_DKSAMPLE
+	bool "daquis sample"
+	select BR2_PACKAGE_ROSCPP
+	select BR2_PACKAGE_ROSPY
+	select BR2_PACKAGE_STD_MSGS
+	select BR2_PACKAGE_GENMSG
+	help
+		a listener/speaker demo

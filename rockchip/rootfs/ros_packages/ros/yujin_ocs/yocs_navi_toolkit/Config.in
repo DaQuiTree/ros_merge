@@ -1,0 +1,4 @@
+config BR2_PACKAGE_YOCS_NAVI_TOOLKIT
+    bool "yocs_navi_toolkit"
+    help
+      "yocs_navi_toolkit" 

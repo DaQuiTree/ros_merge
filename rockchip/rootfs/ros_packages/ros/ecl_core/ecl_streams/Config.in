@@ -1,0 +1,4 @@
+config BR2_PACKAGE_ECL_STREAMS
+    bool "ecl_streams"
+    help
+      "ecl_streams" 

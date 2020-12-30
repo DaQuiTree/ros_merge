@@ -1,0 +1,4 @@
+config BR2_PACKAGE_YOCS_AR_MARKER_TRACKING
+    bool "yocs_ar_marker_tracking"
+    help
+      "yocs_ar_marker_tracking" 

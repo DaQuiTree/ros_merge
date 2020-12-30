@@ -1,0 +1,4 @@
+config BR2_PACKAGE_YOCS_DIFF_DRIVE_POSE_CONTROLLER
+    bool "yocs_diff_drive_pose_controller"
+    help
+      "yocs_diff_drive_pose_controller" 

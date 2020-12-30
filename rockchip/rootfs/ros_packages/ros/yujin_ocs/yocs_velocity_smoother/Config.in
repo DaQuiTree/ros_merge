@@ -1,0 +1,4 @@
+config BR2_PACKAGE_YOCS_VELOCITY_SMOOTHER
+    bool "yocs_velocity_smoother"
+    help
+      "yocs_velocity_smoother" 

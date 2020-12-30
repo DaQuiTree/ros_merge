@@ -1,0 +1,4 @@
+config BR2_PACKAGE_YOCS_CONTROLLERS
+    bool "yocs_controllers"
+    help
+      "yocs_controllers" 

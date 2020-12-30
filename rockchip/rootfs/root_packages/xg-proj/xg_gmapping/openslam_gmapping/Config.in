@@ -1,0 +1,5 @@
+config BR2_PACKAGE_OPENSLAM_GMAPPING
+    bool "openslam_gmapping"
+    help
+      "openslam_gmapping" 
+

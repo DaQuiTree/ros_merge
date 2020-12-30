@@ -1,0 +1,4 @@
+config BR2_PACKAGE_ECL_CONFIG
+    bool "ecl_config"
+    help
+      "ecl_config" 

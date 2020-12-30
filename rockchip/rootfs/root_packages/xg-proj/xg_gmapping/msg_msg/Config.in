@@ -1,0 +1,10 @@
+config BR2_PACKAGE_MSG_MSG
+    bool "msg_msg"
+    select BR2_PACKAGE_ROSCPP
+    select BR2_PACKAGE_ROSPY
+    select BR2_PACKAGE_MESSAGE_GENERATION
+    select BR2_PACKAGE_MESSAGE_RUNTIME
+    select BR2_PACKAGE_STD_MSGS
+    help
+      "msg_msg" 
+

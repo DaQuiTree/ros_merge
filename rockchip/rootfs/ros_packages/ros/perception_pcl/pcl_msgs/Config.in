@@ -1,0 +1,4 @@
+config BR2_PACKAGE_PCL_MSGS_BUILD
+    bool "pcl_msgs"
+    help
+      "pcl_msgs" 

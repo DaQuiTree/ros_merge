@@ -1,0 +1,4 @@
+config BR2_PACKAGE_ECL_LITE
+    bool "ecl_lite"
+    help
+       ecl_lite

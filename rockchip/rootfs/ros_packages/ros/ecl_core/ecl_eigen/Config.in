@@ -1,0 +1,4 @@
+config BR2_PACKAGE_ECL_EIGEN
+    bool "ecl_eigen"
+    help
+      "ecl_eigen" 

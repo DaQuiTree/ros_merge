@@ -1,0 +1,4 @@
+config BR2_PACKAGE_PCL_ROS_BUILD
+    bool "pcl_ros"
+    help
+      "pcl_ros" 

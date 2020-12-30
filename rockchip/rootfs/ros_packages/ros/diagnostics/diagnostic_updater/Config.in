@@ -1,0 +1,4 @@
+config BR2_PACKAGE_DIAGNOSTIC_UPDATER
+    bool "diagnostic_updater"
+    help
+      "diagnostic_updater" 

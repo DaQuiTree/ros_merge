@@ -1,0 +1,4 @@
+config BR2_PACKAGE_YOCS_WAYPOINT_PROVIDER
+    bool "yocs_waypoint_provider"
+    help
+      "yocs_waypoint_provider" 

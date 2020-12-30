@@ -1,0 +1,8 @@
+menuconfig BR2_PACKAGE_ECL_TOOLS_SET
+	bool "ecl_tools"
+	depends on BR2_PACKAGE_HOST_CATKIN
+
+if BR2_PACKAGE_ECL_TOOLS_SET
+source "package/rockchip/ros/ecl_tools/ecl_build/Config.in"
+source "package/rockchip/ros/ecl_tools/ecl_license/Config.in"
+endif

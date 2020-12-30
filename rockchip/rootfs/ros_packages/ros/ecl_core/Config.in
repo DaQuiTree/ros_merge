@@ -1,0 +1,30 @@
+menuconfig BR2_PACKAGE_ECL_CORE_SET
+	bool "ecl_core"
+	depends on BR2_PACKAGE_HOST_CATKIN
+
+if BR2_PACKAGE_ECL_CORE_SET
+source "package/rockchip/ros/ecl_core/sophus/Config.in"
+source "package/rockchip/ros/ecl_core/ecl_command_line/Config.in"
+source "package/rockchip/ros/ecl_core/ecl_eigen/Config.in"
+source "package/rockchip/ros/ecl_core/ecl_exceptions/Config.in"
+source "package/rockchip/ros/ecl_core/ecl_mpl/Config.in"
+source "package/rockchip/ros/ecl_core/ecl_time/Config.in"
+source "package/rockchip/ros/ecl_core/ecl_ipc/Config.in"
+source "package/rockchip/ros/ecl_core/ecl_type_traits/Config.in"
+source "package/rockchip/ros/ecl_core/ecl_filesystem/Config.in"
+source "package/rockchip/ros/ecl_core/ecl_math/Config.in"
+source "package/rockchip/ros/ecl_core/ecl_concepts/Config.in"
+source "package/rockchip/ros/ecl_core/ecl_converters/Config.in"
+source "package/rockchip/ros/ecl_core/ecl_utilities/Config.in"
+source "package/rockchip/ros/ecl_core/ecl_threads/Config.in"
+source "package/rockchip/ros/ecl_core/ecl_formatters/Config.in"
+source "package/rockchip/ros/ecl_core/ecl_containers/Config.in"
+source "package/rockchip/ros/ecl_core/ecl_sigslots/Config.in"
+source "package/rockchip/ros/ecl_core/ecl_linear_algebra/Config.in"
+source "package/rockchip/ros/ecl_core/ecl_statistics/Config.in"
+source "package/rockchip/ros/ecl_core/ecl_geometry/Config.in"
+source "package/rockchip/ros/ecl_core/ecl_devices/Config.in"
+source "package/rockchip/ros/ecl_core/ecl_streams/Config.in"
+source "package/rockchip/ros/ecl_core/ecl_core_apps/Config.in"
+source "package/rockchip/ros/ecl_core/ecl_core/Config.in"
+endif

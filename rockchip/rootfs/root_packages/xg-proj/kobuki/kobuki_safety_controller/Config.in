@@ -1,0 +1,13 @@
+config BR2_PACKAGE_KOBUKI_SAFETY_CONTROLLER
+    bool "kobuki_safety_controller"
+    select BR2_PACKAGE_ROSCPP
+    select BR2_PACKAGE_NODELET
+    select BR2_PACKAGE_PLUGINLIB
+    select BR2_PACKAGE_STD_MSGS
+    select BR2_PACKAGE_GEOMETRY_MSGS
+    select BR2_PACKAGE_KOBUKI_MSGS
+    select BR2_PACKAGE_YOCS_CONTROLLERS
+    select BR2_PACKAGE_ECL_THREADS
+    help
+      "kobuki_safety_controller" 
+

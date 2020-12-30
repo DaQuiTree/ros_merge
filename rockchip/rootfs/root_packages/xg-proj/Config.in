@@ -1,0 +1,15 @@
+menuconfig BR2_PACKAGE_XG_PROJ
+	bool "xg-proj packages"
+	depends on BR2_PACKAGE_ROS_SUPPORT_SET
+	depends on BR2_PACKAGE_ROS_KINETIC
+	
+if  BR2_PACKAGE_XG_PROJ
+	source "package/xg-proj/robot_msgs/Config.in"
+	source "package/xg-proj/topband_app/Config.in"
+	source "package/xg-proj/kobuki/Config.in"
+	source "package/xg-proj/xg_tasks/Config.in"
+	source "package/xg-proj/baidu_speech/Config.in"
+	source "package/xg-proj/ydlidar/Config.in"
+	source "package/xg-proj/xg_gmapping/Config.in"
+endif
+

@@ -1,0 +1,11 @@
+#default to KINETIC
+YOCS_DIFF_DRIVE_POSE_CONTROLLER_VERSION = 0.8.2
+
+YOCS_DIFF_DRIVE_POSE_CONTROLLER_SOURCE = $(YOCS_DIFF_DRIVE_POSE_CONTROLLER_VERSION).tar.gz
+YOCS_DIFF_DRIVE_POSE_CONTROLLER_SITE = https://github.com/yujinrobot/yujin_ocs/archive
+YOCS_DIFF_DRIVE_POSE_CONTROLLER_SUBDIR = yocs_diff_drive_pose_controller
+
+#YOCS_DIFF_DRIVE_POSE_CONTROLLER_DEPENDENCIES = bash findutils
+
+$(eval $(catkin-package))
+

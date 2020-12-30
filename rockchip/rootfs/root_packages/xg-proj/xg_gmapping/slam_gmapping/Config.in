@@ -1,0 +1,12 @@
+config BR2_PACKAGE_SLAM_GMAPPING
+    bool "slam_gmapping"
+    select BR2_PACKAGE_ROSCPP
+    select BR2_PACKAGE_TF
+    select BR2_PACKAGE_ROSTEST
+    select BR2_PACKAGE_NAV_MSGS
+    select BR2_PACKAGE_NODELET
+    select BR2_PACKAGE_AMCL
+    select BR2_PACKAGE_OPENSLAM_GMAPPING
+    help
+      "slam_gmapping" 
+

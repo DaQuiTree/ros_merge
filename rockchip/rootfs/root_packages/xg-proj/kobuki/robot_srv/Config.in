@@ -1,0 +1,10 @@
+config BR2_PACKAGE_ROBOT_SRV
+    bool "robot_srv"
+    select BR2_PACKAGE_STD_MSGS
+    select BR2_PACKAGE_ACTIONLIB_MSGS
+    select BR2_PACKAGE_MESSAGE_GENERATION
+    select BR2_PACKAGE_GEOMETRY_MSGS
+    select BR2_PACKAGE_SENSOR_MSGS
+    help
+      "robot_srv" 
+

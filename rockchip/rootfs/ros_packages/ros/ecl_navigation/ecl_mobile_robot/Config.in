@@ -1,0 +1,4 @@
+config BR2_PACKAGE_ECL_MOBILE_ROBOT
+    bool "ecl_mobile_robot"
+    help
+      "ecl_mobile_robot" 

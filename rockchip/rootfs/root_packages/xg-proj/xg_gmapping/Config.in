@@ -1,0 +1,12 @@
+config BR2_PACKAGE_XG_GMAPPING
+  bool "xg_gmapping"
+  depends on BR2_PACKAGE_HOST_CATKIN
+  help
+    "xiao gou gmapping"
+
+if BR2_PACKAGE_XG_GMAPPING
+source "package/xg-proj/xg_gmapping/amcl/Config.in"
+source "package/xg-proj/xg_gmapping/msg_msg/Config.in"
+source "package/xg-proj/xg_gmapping/openslam_gmapping/Config.in"
+source "package/xg-proj/xg_gmapping/slam_gmapping/Config.in"
+endif

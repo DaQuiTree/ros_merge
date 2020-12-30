@@ -1,0 +1,4 @@
+config BR2_PACKAGE_ECL_FORMATTERS
+    bool "ecl_formatters"
+    help
+      "ecl_formatters" 

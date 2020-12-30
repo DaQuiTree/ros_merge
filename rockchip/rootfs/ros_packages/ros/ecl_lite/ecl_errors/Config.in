@@ -1,0 +1,4 @@
+config BR2_PACKAGE_ECL_ERRORS
+    bool "ecl_errors"
+    help
+      "ecl_errors" 

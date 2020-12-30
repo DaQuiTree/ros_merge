@@ -1,0 +1,12 @@
+config BR2_PACKAGE_KOBUKI_DRIVER
+    bool "kobuki_driver"
+    select BR2_PACKAGE_ECL_BUILD
+    select BR2_PACKAGE_ECL_MOBILE_ROBOT
+    select BR2_PACKAGE_ECL_CONVERTERS
+    select BR2_PACKAGE_ECL_DEVICES
+    select BR2_PACKAGE_ECL_SIGSLOTS
+    select BR2_PACKAGE_ECL_TIME
+    select BR2_PACKAGE_ECL_COMMAND_LINE
+    help
+      "kobuki_driver" 
+

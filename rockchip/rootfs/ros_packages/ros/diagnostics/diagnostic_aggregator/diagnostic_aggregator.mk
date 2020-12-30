@@ -1,0 +1,11 @@
+#default to KINETIC
+DIAGNOSTIC_AGGREGATOR_VERSION = 1.9.7
+
+DIAGNOSTIC_AGGREGATOR_SOURCE = $(DIAGNOSTIC_AGGREGATOR_VERSION).tar.gz
+DIAGNOSTIC_AGGREGATOR_SITE = https://github.com/ros/diagnostics/archive
+DIAGNOSTIC_AGGREGATOR_SUBDIR = diagnostic_aggregator
+
+DIAGNOSTIC_AGGREGATOR_DEPENDENCIES = tinyxml2 
+
+$(eval $(catkin-package))
+

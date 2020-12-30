@@ -1,0 +1,20 @@
+config BR2_PACKAGE_GLOBAL_CLEAN_TASK
+    bool "global_clean_task"
+    depends on BR2_PACKAGE_NAV_P2P_PLANNER
+    select BR2_PACKAGE_ACTIONLIB_MSGS
+    select BR2_PACKAGE_CMAKE_MODULES
+    select BR2_PACKAGE_DYNAMIC_RECONFIGURE
+    select BR2_PACKAGE_GEOMETRY_MSGS
+    select BR2_PACKAGE_MESSAGE_GENERATION
+    select BR2_PACKAGE_NAV_MSGS
+    select BR2_PACKAGE_PLUGINLIB
+    select BR2_PACKAGE_ROSCPP
+    select BR2_PACKAGE_ROSPY
+    select BR2_PACKAGE_STD_SRVS
+    select BR2_PACKAGE_TF
+    select BR2_PACKAGE_ECL_EXCEPTIONS
+    select BR2_PACKAGE_ECL_THREADS
+    select BR2_PACKAGE_ECL_TIME
+    help
+      "global_clean_task" 
+

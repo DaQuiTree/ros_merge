@@ -1,0 +1,12 @@
+config BR2_PACKAGE_MESSAGE_FORWARD
+    bool "message_forward"
+    select BR2_PACKAGE_GEOMETRY_MSGS
+    select BR2_PACKAGE_NAV_MSGS
+    select BR2_PACKAGE_ROBOT_MSGS
+    select BR2_PACKAGE_ROSCPP
+    select BR2_PACKAGE_SENSOR_MSGS
+    select BR2_PACKAGE_STD_MSGS
+    select BR2_PACKAGE_TF
+    help
+      "message_forward" 
+

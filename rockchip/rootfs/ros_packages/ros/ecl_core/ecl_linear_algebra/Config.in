@@ -1,0 +1,4 @@
+config BR2_PACKAGE_ECL_LINEAR_ALGEBRA
+    bool "ecl_linear_algebra"
+    help
+      "ecl_linear_algebra" 

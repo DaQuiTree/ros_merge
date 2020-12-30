@@ -1,0 +1,13 @@
+config BR2_PACKAGE_XG_TASKS
+  bool "xg_tasks"
+  depends on BR2_PACKAGE_HOST_CATKIN
+  help
+    "xiao gou core jobs"
+
+if BR2_PACKAGE_XG_TASKS
+source "package/xg-proj/xg_tasks/nav_p2p_planner/Config.in"
+source "package/xg-proj/xg_tasks/robot_machine/Config.in"
+source "package/xg-proj/xg_tasks/global_clean_task/Config.in"
+source "package/xg-proj/xg_tasks/robot_docking/Config.in"
+source "package/xg-proj/xg_tasks/message_forward/Config.in"
+endif

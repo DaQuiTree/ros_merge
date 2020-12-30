@@ -1,0 +1,10 @@
+config BR2_PACKAGE_KOBUKI_FTDI
+    bool "kobuki_ftdi"
+    select BR2_PACKAGE_ECL_COMMAND_LINE
+    select BR2_PACKAGE_LIBUSB
+    select BR2_PACKAGE_LIBFTDI
+    select BR2_PACKAGE_HOST_PKGCONF
+
+    help
+      "kobuki_ftdi" 
+

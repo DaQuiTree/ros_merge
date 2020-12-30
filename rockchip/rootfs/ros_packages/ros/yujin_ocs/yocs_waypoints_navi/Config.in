@@ -1,0 +1,4 @@
+config BR2_PACKAGE_YOCS_WAYPOINTS_NAVI
+    bool "yocs_waypoints_navi"
+    help
+      "yocs_waypoints_navi" 

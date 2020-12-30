@@ -1,0 +1,4 @@
+config BR2_PACKAGE_ECL_CONVERTERS_LITE
+    bool "ecl_converters_lite"
+    help
+      "ecl_converters_lite" 

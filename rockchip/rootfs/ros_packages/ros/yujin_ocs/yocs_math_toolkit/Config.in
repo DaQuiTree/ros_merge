@@ -1,0 +1,4 @@
+config BR2_PACKAGE_YOCS_MATH_TOOLKIT
+    bool "yocs_math_toolkit"
+    help
+      "yocs_math_toolkit" 

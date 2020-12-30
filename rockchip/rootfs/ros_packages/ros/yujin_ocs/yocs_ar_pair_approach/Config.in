@@ -1,0 +1,4 @@
+config BR2_PACKAGE_YOCS_AR_PAIR_APPROACH
+    bool "yocs_ar_pair_approach"
+    help
+      "yocs_ar_pair_approach" 

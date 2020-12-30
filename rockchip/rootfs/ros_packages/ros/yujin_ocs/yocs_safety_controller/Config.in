@@ -1,0 +1,4 @@
+config BR2_PACKAGE_YOCS_SAFETY_CONTROLLER
+    bool "yocs_safety_controller"
+    help
+      "yocs_safety_controller" 

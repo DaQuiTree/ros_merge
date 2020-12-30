@@ -1,0 +1,12 @@
+config BR2_PACKAGE_AMCL
+    bool "AMCL"
+    select BR2_PACKAGE_ROSBAG
+    select BR2_PACKAGE_DYNAMIC_RECONFIGURE
+    select BR2_PACKAGE_MESSAGE_FILTERS
+    select BR2_PACKAGE_NAV_MSGS
+    select BR2_PACKAGE_ROSCPP
+    select BR2_PACKAGE_STD_SRVS
+    select BR2_PACKAGE_TF
+    help
+      "amcl" 
+

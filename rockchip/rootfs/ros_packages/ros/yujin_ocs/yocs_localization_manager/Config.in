@@ -1,0 +1,4 @@
+config BR2_PACKAGE_YOCS_LOCALIZATION_MANAGER
+    bool "yocs_localization_manager"
+    help
+      "yocs_localization_manager" 

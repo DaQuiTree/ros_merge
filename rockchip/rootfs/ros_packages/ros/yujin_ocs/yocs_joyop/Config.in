@@ -1,0 +1,4 @@
+config BR2_PACKAGE_YOCS_JOYOP
+    bool "yocs_joyop"
+    help
+      "yocs_joyop" 

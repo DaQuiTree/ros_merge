@@ -1,0 +1,4 @@
+config BR2_PACKAGE_YOCS_NAVIGATOR
+    bool "yocs_navigator"
+    help
+      "yocs_navigator" 

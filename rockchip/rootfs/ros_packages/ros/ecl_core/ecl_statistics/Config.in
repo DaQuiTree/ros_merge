@@ -1,0 +1,4 @@
+config BR2_PACKAGE_ECL_STATISTICS
+    bool "ecl_statistics"
+    help
+      "ecl_statistics" 

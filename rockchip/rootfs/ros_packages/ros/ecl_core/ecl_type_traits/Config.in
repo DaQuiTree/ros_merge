@@ -1,0 +1,4 @@
+config BR2_PACKAGE_ECL_TYPE_TRAITS
+    bool "ecl_type_traits"
+    help
+      "ecl_type_traits" 

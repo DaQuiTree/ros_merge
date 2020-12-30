@@ -1,0 +1,8 @@
+config BR2_PACKAGE_ROBOT_DOCKING
+    bool "robot_docking"
+    select BR2_PACKAGE_ROSCPP
+    select BR2_PACKAGE_STD_MSGS
+    select BR2_PACKAGE_ROBOT_MSGS
+    help
+      "robot_docking" 
+

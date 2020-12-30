@@ -1,0 +1,7 @@
+menuconfig BR2_PACKAGE_ECL_NAVIGATION_SET
+	bool "ecl_navigation"
+	depends on BR2_PACKAGE_HOST_CATKIN
+
+if BR2_PACKAGE_ECL_NAVIGATION_SET
+source "package/rockchip/ros/ecl_navigation/ecl_mobile_robot/Config.in"
+endif

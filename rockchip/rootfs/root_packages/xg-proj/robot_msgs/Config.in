@@ -1,0 +1,9 @@
+config BR2_PACKAGE_ROBOT_MSGS
+    bool "robot_msgs"
+    select BR2_PACKAGE_STD_MSGS
+    select BR2_PACKAGE_ACTIONLIB_MSGS
+    select BR2_PACKAGE_GEOMETRY_MSGS
+    select BR2_PACKAGE_MESSAGE_GENERATION
+    help
+      "robot_msgs" 
+

@@ -1,0 +1,4 @@
+config BR2_PACKAGE_YOCS_RAPPS
+    bool "yocs_rapps"
+    help
+      "yocs_rapps" 

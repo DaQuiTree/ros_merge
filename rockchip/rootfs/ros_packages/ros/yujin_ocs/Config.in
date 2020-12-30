@@ -1,0 +1,24 @@
+menuconfig BR2_PACKAGE_YUJIN_OCS_SET
+	bool "yujin_ocs"
+	depends on BR2_PACKAGE_HOST_CATKIN
+
+if BR2_PACKAGE_YUJIN_OCS_SET
+source "package/rockchip/ros/yujin_ocs/yocs_ar_marker_tracking/Config.in"
+source "package/rockchip/ros/yujin_ocs/yocs_ar_pair_approach/Config.in"
+source "package/rockchip/ros/yujin_ocs/yocs_ar_pair_tracking/Config.in"
+source "package/rockchip/ros/yujin_ocs/yocs_cmd_vel_mux/Config.in"
+source "package/rockchip/ros/yujin_ocs/yocs_controllers/Config.in"
+source "package/rockchip/ros/yujin_ocs/yocs_diff_drive_pose_controller/Config.in"
+source "package/rockchip/ros/yujin_ocs/yocs_joyop/Config.in"
+source "package/rockchip/ros/yujin_ocs/yocs_keyop/Config.in"
+source "package/rockchip/ros/yujin_ocs/yocs_localization_manager/Config.in"
+source "package/rockchip/ros/yujin_ocs/yocs_math_toolkit/Config.in"
+source "package/rockchip/ros/yujin_ocs/yocs_navigator/Config.in"
+source "package/rockchip/ros/yujin_ocs/yocs_navi_toolkit/Config.in"
+source "package/rockchip/ros/yujin_ocs/yocs_rapps/Config.in"
+source "package/rockchip/ros/yujin_ocs/yocs_safety_controller/Config.in"
+source "package/rockchip/ros/yujin_ocs/yocs_velocity_smoother/Config.in"
+source "package/rockchip/ros/yujin_ocs/yocs_virtual_sensor/Config.in"
+source "package/rockchip/ros/yujin_ocs/yocs_waypoint_provider/Config.in"
+source "package/rockchip/ros/yujin_ocs/yocs_waypoints_navi/Config.in"
+endif

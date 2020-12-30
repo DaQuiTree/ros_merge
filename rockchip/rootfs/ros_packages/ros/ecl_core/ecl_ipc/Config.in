@@ -1,0 +1,4 @@
+config BR2_PACKAGE_ECL_IPC
+    bool "ecl_ipc"
+    help
+      "ecl_ipc" 
