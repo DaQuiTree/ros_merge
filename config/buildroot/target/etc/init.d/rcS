@@ -29,7 +29,8 @@ wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant.conf
 
 sleep 1
 
-ln -s /dev/ttyS0 /dev/flashlidar
+ln -s /dev/ttyS5 /dev/flashlidar #16
+#ln -s /dev/ttyS5 /dev/ydlidar   #47
 ln -s /dev/ttyS1 /dev/kobuki
 
 /root/zzk_start.sh &
