@@ -25,15 +25,16 @@ for i in /etc/init.d/S??* ;do
     esac
 done
 
-/root/etcs/cron_start.sh &
+/root/etcsXG/cron_start.sh &
 
 wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant.conf
 
 sleep 1
 
-ln -s /dev/ttyS5 /dev/flashlidar #16
+#ln -s /dev/ttyS5 /dev/flashlidar #16
 #ln -s /dev/ttyS5 /dev/ydlidar   #47
+ln -s /dev/ttyS0 /dev/ydlidar   #85
 ln -s /dev/ttyS1 /dev/kobuki
 
-/root/etcs/zzk_start.sh &
+/root/etcsXG/app_start.sh &
 
