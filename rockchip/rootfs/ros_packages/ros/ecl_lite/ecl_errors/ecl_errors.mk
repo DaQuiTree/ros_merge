@@ -5,7 +5,7 @@ ECL_ERRORS_SOURCE = $(ECL_ERRORS_VERSION).tar.gz
 ECL_ERRORS_SITE = https://github.com/stonier/ecl_lite/archive
 ECL_ERRORS_SUBDIR = ecl_errors
 
-#ECL_ERRORS_DEPENDENCIES = bash findutils
+ECL_ERRORS_DEPENDENCIES = ecl_license ecl_config ecl_license 
 
 $(eval $(catkin-package))
 

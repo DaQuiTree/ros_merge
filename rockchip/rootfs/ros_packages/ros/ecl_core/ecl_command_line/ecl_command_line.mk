@@ -5,7 +5,7 @@ ECL_COMMAND_LINE_SOURCE = $(ECL_COMMAND_LINE_VERSION).tar.gz
 ECL_COMMAND_LINE_SITE = https://github.com/stonier/ecl_core/archive
 ECL_COMMAND_LINE_SUBDIR = ecl_command_line
 
-#ECL_COMMAND_LINE_DEPENDENCIES = bash findutils
+ECL_COMMAND_LINE_DEPENDENCIES = ecl_license
 
 $(eval $(catkin-package))
 

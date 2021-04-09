@@ -5,7 +5,7 @@ ECL_MATH_SOURCE = $(ECL_MATH_VERSION).tar.gz
 ECL_MATH_SITE = https://github.com/stonier/ecl_core/archive
 ECL_MATH_SUBDIR = ecl_math
 
-#ECL_MATH_DEPENDENCIES = bash findutils
+ECL_MATH_DEPENDENCIES = ecl_license ecl_type_traits
 
 $(eval $(catkin-package))
 

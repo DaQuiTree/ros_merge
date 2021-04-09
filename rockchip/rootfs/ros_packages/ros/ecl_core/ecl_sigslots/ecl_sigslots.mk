@@ -5,7 +5,7 @@ ECL_SIGSLOTS_SOURCE = $(ECL_SIGSLOTS_VERSION).tar.gz
 ECL_SIGSLOTS_SITE = https://github.com/stonier/ecl_core/archive
 ECL_SIGSLOTS_SUBDIR = ecl_sigslots
 
-#ECL_SIGSLOTS_DEPENDENCIES = bash findutils
+ECL_SIGSLOTS_DEPENDENCIES = ecl_license ecl_config ecl_threads
 
 $(eval $(catkin-package))
 

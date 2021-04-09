@@ -5,7 +5,7 @@ ECL_MPL_SOURCE = $(ECL_MPL_VERSION).tar.gz
 ECL_MPL_SITE = https://github.com/stonier/ecl_core/archive
 ECL_MPL_SUBDIR = ecl_mpl
 
-#ECL_MPL_DEPENDENCIES = bash findutils
+ECL_MPL_DEPENDENCIES = ecl_license
 
 $(eval $(catkin-package))
 

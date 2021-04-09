@@ -5,7 +5,7 @@ ECL_EIGEN_SOURCE = $(ECL_EIGEN_VERSION).tar.gz
 ECL_EIGEN_SITE = https://github.com/stonier/ecl_core/archive
 ECL_EIGEN_SUBDIR = ecl_eigen
 
-#ECL_EIGEN_DEPENDENCIES = bash findutils
+ECL_EIGEN_DEPENDENCIES = ecl_license eigen
 
 $(eval $(catkin-package))
 

@@ -5,7 +5,7 @@ ECL_IO_SOURCE = $(ECL_IO_VERSION).tar.gz
 ECL_IO_SITE = https://github.com/stonier/ecl_lite/archive
 ECL_IO_SUBDIR = ecl_io
 
-#ECL_IO_DEPENDENCIES = bash findutils
+ECL_IO_DEPENDENCIES = ecl_license ecl_config ecl_errors
 
 $(eval $(catkin-package))
 

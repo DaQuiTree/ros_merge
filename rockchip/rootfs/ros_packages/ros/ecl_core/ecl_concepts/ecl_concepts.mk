@@ -5,7 +5,7 @@ ECL_CONCEPTS_SOURCE = $(ECL_CONCEPTS_VERSION).tar.gz
 ECL_CONCEPTS_SITE = https://github.com/stonier/ecl_core/archive
 ECL_CONCEPTS_SUBDIR = ecl_concepts
 
-#ECL_CONCEPTS_DEPENDENCIES = bash findutils
+ECL_CONCEPTS_DEPENDENCIES = ecl_license ecl_config ecl_type_traits
 
 $(eval $(catkin-package))
 

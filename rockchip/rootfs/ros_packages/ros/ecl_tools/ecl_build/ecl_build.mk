@@ -5,7 +5,7 @@ ECL_BUILD_SOURCE = $(ECL_BUILD_VERSION).tar.gz
 ECL_BUILD_SITE = https://github.com/stonier/ecl_tools/archive
 ECL_BUILD_SUBDIR = ecl_build
 
-#ECL_BUILD_DEPENDENCIES = bash findutils
+ECL_BUILD_DEPENDENCIES = ecl_license
 
 $(eval $(catkin-package))
 
